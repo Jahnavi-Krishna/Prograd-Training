@@ -15,7 +15,7 @@ body{
   .intro{
     text-align:center;
   }
-  .intro, .spl, .highlights, .table{
+  .intro, .spl, .highlights, .table, .inline-elements{
     margin: 3% 15%;
   }
   
