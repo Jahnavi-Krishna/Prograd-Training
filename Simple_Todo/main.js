@@ -17,3 +17,17 @@ addToDoButton.addEventListener('click', function(){
         toDoContainer.removeChild(paragraph);
     })
 })
+
+inputField.addEventListener("keyup", function(event){
+    if(event.key == "Enter") {
+        // call a function();
+        var paragraph = document.createElement('p');
+        paragraph.classList.add('paragraph-styling');
+        paragraph.innerText = inputField.value;
+        toDoContainer.appendChild(paragraph);
+        inputField.value = "";
+        paragraph.addEventListener('click', function(){
+            paragraph.style.textDecoration = "line-through";
+        })
+    }
+});
