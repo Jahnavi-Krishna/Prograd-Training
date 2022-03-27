@@ -1,3 +1,3 @@
-Task - 1 create a web page with inline elements
+Task 1 - Namma_Bengaluru (create a web page with inline elements)
 
-Task - 2 create a form
+Task 2 - Form
