@@ -1,33 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+   <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+    <title>DOM Manipulation</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <!-- The most common way to access a html ele is by id -->
     <div>
         First Number
-        <input type="number" id="fno" name="num" placeholder="Enter 1st number" class="ibox">
+        <input type="number" id="fno" placeholder="Enter First Number" class="ibox">
     </div>
     <div>
         Second Number
-        <input type="number" id="sno" name="num" placeholder="Enter 2nd number" class="ibox">
+        <input type="number" id="sno" placeholder="Enter Second Number" class="ibox">
     </div>
-    <button onClick="add()" id="btn">ADD</button>
-    <button onClick="methods()">ACCESS</button>
-    <button onClick="changecolor()">ChangeColor</button>
-    <br> <br>
-    <button onClick="yellow()">Yellow</button>
-    <button onClick="tap()">Tap</button>
-    <button onClick="button()">Button</button>
-    <button onClick="query()">Query</button>
-    <button onClick="allp()">All</button>
-    <p class="para">Hello</p>
-    <p class="demo"></p>
+    <button onclick="add()">Add</button>
+    <button onclick="methods()">Access</button>
+    <p class="pare">Hello</p>
     <p id="demo" class="para">Hey</p>
+    <script>
+        function add(){
+            var res = Number(document.getElementById("fno").value) + Number(document.getElementById("sno").value);
+            console.log(res);
+        }
+        // Accessing the DOM Elements
+        // 1. getElementById
+        // Ids are case sensitive - demo & Demo work as 2 dif Ids.
+        // function methods(){
+        //     var res1 = document.getElementById("demo");
+        //     console.log(res1);
+        // }
+
+        // 2. ByClassName
+        function methods(){
+            var res=document.getElementsByClassName("para");
+            for(var i=0; i<res.length; i++){
+                res[i].style.color = "red"
+            }
+        }
+
+        // 3. ByTagName
+    //     function methods(){
+    //         var res=document.getElementsByTagName("p")
+    //         for(var i=0; i<res1.length; i++>){
+    //             res[i].style.color = "green"
+    //         }
+    //     }
+    // </script>
 </body>
 </html>
